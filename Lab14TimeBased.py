@@ -5,7 +5,6 @@ import os
 os.system("clear")
 def main(url):
         print("---------------------------start------------------------------------")
-        global TrackId
         ResponseTrack=requests.get(url)
         TrackId=ResponseTrack.headers.get("Set-Cookie").split(";")[0].split("=")[1]
         char="qwertyuiopasdfghjklzxcvbnm0123456789"
